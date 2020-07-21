@@ -1,0 +1,6 @@
+[submodule "libs/amun"]
+	path = libs/amun
+	url = ../amun
+[submodule "libs/config"]
+	path = libs/config
+	url = ../config

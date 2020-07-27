@@ -4,3 +4,6 @@
 [submodule "libs/config"]
 	path = libs/config
 	url = ../config
+[submodule "libs/estl"]
+	path = libs/estl
+	url = ../estl

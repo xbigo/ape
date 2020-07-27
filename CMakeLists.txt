@@ -43,3 +43,4 @@ endif()
 
 add_subdirectory(libs/amun)
 add_subdirectory(libs/config)
+add_subdirectory(libs/estl)

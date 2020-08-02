@@ -2,6 +2,7 @@
 
 ## Build
 
+For Mac & Linux
 ```bash
 git clone https://github.com/xbigo/ape.git
 cd ape
@@ -13,6 +14,8 @@ make
 make check
 make install
 ```
+
+For MSVC 
 
 ```bat
 git clone https://github.com/xbigo/ape.git

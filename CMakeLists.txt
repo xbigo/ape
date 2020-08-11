@@ -24,9 +24,27 @@ if (BUILD_TESTING)
 	set(APE_BUILD_TESTING ${BUILD_TESTING})
 endif()
 
-amun_check_build(CONFIG NORMAL INSTALL TEST)
+amun_check_build(APE NORMAL INSTALL TEST)
 
-if(${CONFIG_INSTALL})
+if(${APE_NORMAL})
+	option(APE_BUILD_SHARED "Enable shared library build" ON )
+	if (APE_BUILD_SHARED)
+		add_library(ape SHARED ${sources})
+		target_compile_definitions(ape PRIVATE APE_BUILD_SHARED) 
+	else()
+		add_library(ape STATIC ${sources})
+		target_compile_definitions(ape PRIVATE APE_BUILD_STATIC) 
+	endif()
+	target_compile_features(ape PUBLIC cxx_std_17)
+	target_compile_definitions(ape PUBLIC
+		$<$<CXX_COMPILER_ID:MSVC>:
+		_SCL_SECURE_NO_WARNINGS
+		_SILENCE_CXX17_UNCAUGHT_EXCEPTION_DEPRECATION_WARNING
+		>)
+	add_library(Ape::ape ALIAS ape )
+endif()
+
+if(${APE_INSTALL})
 	add_library(Ape INTERFACE)
 	amun_get_cmake_install_dir(APE_INSTALL_DIR)
 
@@ -37,10 +55,11 @@ if(${CONFIG_INSTALL})
 	install(FILES cmake/ApeConfig-include.cmake DESTINATION ${APE_INSTALL_DIR})
 endif()
 
-if(${CONFIG_TEST})
+if(${APE_TEST})
 	amun_enable_testing()
 endif()
 
 add_subdirectory(libs/amun)
 add_subdirectory(libs/config)
 add_subdirectory(libs/estl)
+add_subdirectory(libs/thread)

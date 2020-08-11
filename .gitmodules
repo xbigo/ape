@@ -7,3 +7,6 @@
 [submodule "libs/estl"]
 	path = libs/estl
 	url = ../estl
+[submodule "libs/thread"]
+	path = libs/thread
+	url = ../thread

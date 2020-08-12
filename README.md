@@ -23,7 +23,7 @@ cd ape
 git submodule update --init
 mkdir ..\build
 cd ..\build
-cmake -S ../ape -D BUILD_TESTING=1
+cmake -S ../ape -D BUILD_TESTING=1 -G "Visual Studio 16 2019"
 cmake --build .
 cmake --build . --target check
 cmake --build . --target install

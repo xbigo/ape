@@ -24,6 +24,8 @@ if (BUILD_TESTING)
 	set(APE_BUILD_TESTING ${BUILD_TESTING})
 endif()
 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
 amun_check_build(APE NORMAL INSTALL TEST)
 
 if(${APE_NORMAL})

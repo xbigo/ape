@@ -45,7 +45,10 @@
         "streambuf": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp",
-        "bit": "cpp"
+        "bit": "cpp",
+        "span": "cpp",
+        "ranges": "cpp"
     },
-    "C_Cpp.default.configurationProvider": "go2sh.cmake-integration"
+    "C_Cpp.default.configurationProvider": "go2sh.cmake-integration",
+    "cmake.configureOnOpen": false
 }

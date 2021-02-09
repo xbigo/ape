@@ -47,7 +47,8 @@
         "typeinfo": "cpp",
         "bit": "cpp",
         "span": "cpp",
-        "ranges": "cpp"
+        "ranges": "cpp",
+        "gsl_assert": "cpp"
     },
     "C_Cpp.default.configurationProvider": "go2sh.cmake-integration",
     "cmake.configureOnOpen": false

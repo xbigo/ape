@@ -32,12 +32,12 @@ if(${APE_NORMAL})
 	option(APE_BUILD_SHARED "Enable shared library build" ON )
 	if (APE_BUILD_SHARED)
 		add_library(ape SHARED ${sources})
-		target_compile_definitions(ape PRIVATE APE_BUILD_SHARED) 
+		target_compile_definitions(ape PRIVATE APE_BUILD_SHARED)
 	else()
 		add_library(ape STATIC ${sources})
-		target_compile_definitions(ape PRIVATE APE_BUILD_STATIC) 
+		target_compile_definitions(ape PRIVATE APE_BUILD_STATIC)
 	endif()
-	target_compile_features(ape PUBLIC cxx_std_17)
+	target_compile_features(ape PUBLIC cxx_std_20)
 	target_compile_definitions(ape PUBLIC
 		$<$<CXX_COMPILER_ID:MSVC>:
 		_SCL_SECURE_NO_WARNINGS

@@ -59,6 +59,18 @@
             "description": "",
             "displayName": "",
             "configurePreset": "gcc_release_test"
+        },
+        {
+            "name": "clang_debug_test",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "clang_debug_test"
+        },
+        {
+            "name": "clang_release_test",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "clang_release_test"
         }
     ]
 }

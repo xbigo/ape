@@ -14,37 +14,57 @@
             "name": "clang_debug",
             "description": "",
             "displayName": "",
-            "configurePreset": "clang_debug"
+            "configurePreset": "clang_debug",
+            "jobs": 8
         },
         {
             "name": "gcc_debug",
             "description": "",
             "displayName": "",
-            "configurePreset": "gcc_debug"
+            "configurePreset": "gcc_debug",
+            "jobs": 8
         },
         {
             "name": "clang_release",
             "description": "",
             "displayName": "",
-            "configurePreset": "clang_release"
+            "configurePreset": "clang_release",
+            "jobs": 8
         },
         {
             "name": "gcc_release",
             "description": "",
             "displayName": "",
-            "configurePreset": "gcc_release"
+            "configurePreset": "gcc_release",
+            "jobs": 8
         },
         {
-            "name": "debug_with_test",
+            "name": "gcc_debug_with_test",
             "description": "",
             "displayName": "",
-            "configurePreset": "gcc_debug_test"
+            "configurePreset": "gcc_debug_test",
+            "jobs": 8
         },
         {
-            "name": "release_with_test",
+            "name": "clang_debug_with_test",
             "description": "",
             "displayName": "",
-            "configurePreset": "gcc_release_test"
+            "configurePreset": "clang_debug_test",
+            "jobs": 8
+        },
+        {
+            "name": "gcc_release_with_test",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "gcc_release_test",
+            "jobs": 8
+        },
+        {
+            "name": "clang_release_with_test",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "clang_release_test",
+            "jobs": 8
         }
     ],
     "testPresets": [
@@ -71,6 +91,24 @@
             "description": "",
             "displayName": "",
             "configurePreset": "clang_release_test"
+        },
+        {
+            "name": "gcc_benchmark",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "gcc_release_test",
+            "environment": {
+                "TEST_CASE_FILTER": "[!benchmark]"
+            }
+        },
+        {
+            "name": "clang_benchmark",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "clang_release_test",
+            "environment": {
+                "TEST_CASE_FILTER": "[!benchmark]"
+            }
         }
     ]
 }

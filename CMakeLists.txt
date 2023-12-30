@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 
 project(Ape
-	VERSION "0.2.0"
+	VERSION "0.4.2"
 	DESCRIPTION "A collection of small C++ libraries"
 	LANGUAGES CXX)
 
